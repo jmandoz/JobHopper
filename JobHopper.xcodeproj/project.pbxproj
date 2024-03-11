@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C1E37432B9E8D7F0038E7DC /* JobHopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */; };
+		4C1E37452B9E8D7F0038E7DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37442B9E8D7F0038E7DC /* ContentView.swift */; };
+		4C1E37472B9E8D800038E7DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E37462B9E8D800038E7DC /* Assets.xcassets */; };
+		4C1E374A2B9E8D800038E7DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E37492B9E8D800038E7DC /* Preview Assets.xcassets */; };
+		4C1E37542B9E8D800038E7DC /* JobHopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37532B9E8D800038E7DC /* JobHopperTests.swift */; };
+		4C1E375E2B9E8D800038E7DC /* JobHopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E375D2B9E8D800038E7DC /* JobHopperUITests.swift */; };
+		4C1E37602B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E375F2B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift */; };
+		4C1E376E2B9E94290038E7DC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E376D2B9E94290038E7DC /* ListView.swift */; };
+		4C1E37702B9E948A0038E7DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E376F2B9E948A0038E7DC /* HomeView.swift */; };
+		4C1E37722B9E949D0038E7DC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37712B9E949D0038E7DC /* AccountView.swift */; };
+		4C4CA1432BC85D8700138E92 /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4CA1422BC85D8700138E92 /* JobDetailView.swift */; };
+		4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C964B482BAFB4520036437A /* Font+Extensions.swift */; };
+		4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EC2BAF8B61004172DF /* JobOpening.swift */; };
+		4CE226F02BAF8D5A004172DF /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EF2BAF8D5A004172DF /* JobCard.swift */; };
+		4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F12BAF8D7E004172DF /* ListViewModel.swift */; };
+		4CE226F42BAF9488004172DF /* InterviewProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F32BAF9488004172DF /* InterviewProcess.swift */; };
+		4CE226F62BAFA167004172DF /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F52BAFA167004172DF /* Interview.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C1E37502B9E8D800038E7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1E37372B9E8D7F0038E7DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1E373E2B9E8D7F0038E7DC;
+			remoteInfo = JobHopper;
+		};
+		4C1E375A2B9E8D800038E7DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C1E37372B9E8D7F0038E7DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1E373E2B9E8D7F0038E7DC;
+			remoteInfo = JobHopper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperApp.swift; sourceTree = "<group>"; };
+		4C1E37442B9E8D7F0038E7DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C1E37462B9E8D800038E7DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1E37492B9E8D800038E7DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E37532B9E8D800038E7DC /* JobHopperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperTests.swift; sourceTree = "<group>"; };
+		4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E375D2B9E8D800038E7DC /* JobHopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperUITests.swift; sourceTree = "<group>"; };
+		4C1E375F2B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C1E376D2B9E94290038E7DC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		4C1E376F2B9E948A0038E7DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4C1E37712B9E949D0038E7DC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		4C4CA1422BC85D8700138E92 /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
+		4C964B482BAFB4520036437A /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		4C964B4A2BAFB5DF0036437A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4C964B4B2BAFB6D00036437A /* CooperHewitt-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Medium.otf"; sourceTree = "<group>"; };
+		4C964B4C2BAFB6D00036437A /* CooperHewitt-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Thin.otf"; sourceTree = "<group>"; };
+		4C964B4D2BAFB6D00036437A /* CooperHewitt-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		4C964B4E2BAFB6D00036437A /* CooperHewitt-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-HeavyItalic.otf"; sourceTree = "<group>"; };
+		4C964B4F2BAFB6D00036437A /* CooperHewitt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Bold.otf"; sourceTree = "<group>"; };
+		4C964B502BAFB6D00036437A /* CooperHewitt-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-LightItalic.otf"; sourceTree = "<group>"; };
+		4C964B512BAFB6D00036437A /* SIL Open Font License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		4C964B522BAFB6D00036437A /* CooperHewitt-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-BoldItalic.otf"; sourceTree = "<group>"; };
+		4C964B532BAFB6D00036437A /* CooperHewitt-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-ThinItalic.otf"; sourceTree = "<group>"; };
+		4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Book.otf"; sourceTree = "<group>"; };
+		4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Light.otf"; sourceTree = "<group>"; };
+		4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Heavy.otf"; sourceTree = "<group>"; };
+		4C964B572BAFB6D10036437A /* CooperHewitt-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-MediumItalic.otf"; sourceTree = "<group>"; };
+		4C964B582BAFB6D10036437A /* CooperHewitt-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Semibold.otf"; sourceTree = "<group>"; };
+		4C964B592BAFB6D10036437A /* CooperHewitt-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-BookItalic.otf"; sourceTree = "<group>"; };
+		4CE226EC2BAF8B61004172DF /* JobOpening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOpening.swift; sourceTree = "<group>"; };
+		4CE226EF2BAF8D5A004172DF /* JobCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
+		4CE226F12BAF8D7E004172DF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		4CE226F32BAF9488004172DF /* InterviewProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewProcess.swift; sourceTree = "<group>"; };
+		4CE226F52BAFA167004172DF /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C1E373C2B9E8D7F0038E7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E374C2B9E8D800038E7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E37562B9E8D800038E7DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C1E37362B9E8D7F0038E7DC = {
+			isa = PBXGroup;
+			children = (
+				4C1E37412B9E8D7F0038E7DC /* JobHopper */,
+				4C1E37522B9E8D800038E7DC /* JobHopperTests */,
+				4C1E375C2B9E8D800038E7DC /* JobHopperUITests */,
+				4C1E37402B9E8D7F0038E7DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C1E37402B9E8D7F0038E7DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */,
+				4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */,
+				4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C1E37412B9E8D7F0038E7DC /* JobHopper */ = {
+			isa = PBXGroup;
+			children = (
+				4C964B4A2BAFB5DF0036437A /* Info.plist */,
+				4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */,
+				4C1E37442B9E8D7F0038E7DC /* ContentView.swift */,
+				4CE226EB2BAF8B0F004172DF /* Models */,
+				4C1E376C2B9E905E0038E7DC /* Views */,
+				4CE226EA2BAF87D9004172DF /* ViewModels */,
+				4CE226EE2BAF8D40004172DF /* Components */,
+				4C964B262BAFB2E60036437A /* Fonts */,
+				4C1E37462B9E8D800038E7DC /* Assets.xcassets */,
+				4C1E37482B9E8D800038E7DC /* Preview Content */,
+			);
+			path = JobHopper;
+			sourceTree = "<group>";
+		};
+		4C1E37482B9E8D800038E7DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E37492B9E8D800038E7DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C1E37522B9E8D800038E7DC /* JobHopperTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E37532B9E8D800038E7DC /* JobHopperTests.swift */,
+			);
+			path = JobHopperTests;
+			sourceTree = "<group>";
+		};
+		4C1E375C2B9E8D800038E7DC /* JobHopperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E375D2B9E8D800038E7DC /* JobHopperUITests.swift */,
+				4C1E375F2B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift */,
+			);
+			path = JobHopperUITests;
+			sourceTree = "<group>";
+		};
+		4C1E376C2B9E905E0038E7DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C1E376D2B9E94290038E7DC /* ListView.swift */,
+				4C1E376F2B9E948A0038E7DC /* HomeView.swift */,
+				4C1E37712B9E949D0038E7DC /* AccountView.swift */,
+				4C4CA1422BC85D8700138E92 /* JobDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C964B262BAFB2E60036437A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4C964B482BAFB4520036437A /* Font+Extensions.swift */,
+				4C964B4C2BAFB6D00036437A /* CooperHewitt-Thin.otf */,
+				4C964B4D2BAFB6D00036437A /* CooperHewitt-SemiboldItalic.otf */,
+				4C964B512BAFB6D00036437A /* SIL Open Font License.txt */,
+				4C964B4F2BAFB6D00036437A /* CooperHewitt-Bold.otf */,
+				4C964B522BAFB6D00036437A /* CooperHewitt-BoldItalic.otf */,
+				4C964B532BAFB6D00036437A /* CooperHewitt-ThinItalic.otf */,
+				4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */,
+				4C964B592BAFB6D10036437A /* CooperHewitt-BookItalic.otf */,
+				4C964B4B2BAFB6D00036437A /* CooperHewitt-Medium.otf */,
+				4C964B502BAFB6D00036437A /* CooperHewitt-LightItalic.otf */,
+				4C964B4E2BAFB6D00036437A /* CooperHewitt-HeavyItalic.otf */,
+				4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */,
+				4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */,
+				4C964B572BAFB6D10036437A /* CooperHewitt-MediumItalic.otf */,
+				4C964B582BAFB6D10036437A /* CooperHewitt-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4CE226EA2BAF87D9004172DF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4CE226F12BAF8D7E004172DF /* ListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4CE226EB2BAF8B0F004172DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CE226EC2BAF8B61004172DF /* JobOpening.swift */,
+				4CE226F32BAF9488004172DF /* InterviewProcess.swift */,
+				4CE226F52BAFA167004172DF /* Interview.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CE226EE2BAF8D40004172DF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4CE226EF2BAF8D5A004172DF /* JobCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C1E373E2B9E8D7F0038E7DC /* JobHopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopper" */;
+			buildPhases = (
+				4C1E373B2B9E8D7F0038E7DC /* Sources */,
+				4C1E373C2B9E8D7F0038E7DC /* Frameworks */,
+				4C1E373D2B9E8D7F0038E7DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JobHopper;
+			productName = JobHopper;
+			productReference = 4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C1E374E2B9E8D800038E7DC /* JobHopperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperTests" */;
+			buildPhases = (
+				4C1E374B2B9E8D800038E7DC /* Sources */,
+				4C1E374C2B9E8D800038E7DC /* Frameworks */,
+				4C1E374D2B9E8D800038E7DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1E37512B9E8D800038E7DC /* PBXTargetDependency */,
+			);
+			name = JobHopperTests;
+			productName = JobHopperTests;
+			productReference = 4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4C1E37582B9E8D800038E7DC /* JobHopperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperUITests" */;
+			buildPhases = (
+				4C1E37552B9E8D800038E7DC /* Sources */,
+				4C1E37562B9E8D800038E7DC /* Frameworks */,
+				4C1E37572B9E8D800038E7DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1E375B2B9E8D800038E7DC /* PBXTargetDependency */,
+			);
+			name = JobHopperUITests;
+			productName = JobHopperUITests;
+			productReference = 4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C1E37372B9E8D7F0038E7DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4C1E373E2B9E8D7F0038E7DC = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					4C1E374E2B9E8D800038E7DC = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4C1E373E2B9E8D7F0038E7DC;
+					};
+					4C1E37582B9E8D800038E7DC = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4C1E373E2B9E8D7F0038E7DC;
+					};
+				};
+			};
+			buildConfigurationList = 4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHopper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C1E37362B9E8D7F0038E7DC;
+			productRefGroup = 4C1E37402B9E8D7F0038E7DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C1E373E2B9E8D7F0038E7DC /* JobHopper */,
+				4C1E374E2B9E8D800038E7DC /* JobHopperTests */,
+				4C1E37582B9E8D800038E7DC /* JobHopperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C1E373D2B9E8D7F0038E7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1E374A2B9E8D800038E7DC /* Preview Assets.xcassets in Resources */,
+				4C1E37472B9E8D800038E7DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E374D2B9E8D800038E7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E37572B9E8D800038E7DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C1E373B2B9E8D7F0038E7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */,
+				4C1E37452B9E8D7F0038E7DC /* ContentView.swift in Sources */,
+				4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */,
+				4C4CA1432BC85D8700138E92 /* JobDetailView.swift in Sources */,
+				4C1E37702B9E948A0038E7DC /* HomeView.swift in Sources */,
+				4C1E37722B9E949D0038E7DC /* AccountView.swift in Sources */,
+				4C1E37432B9E8D7F0038E7DC /* JobHopperApp.swift in Sources */,
+				4CE226F42BAF9488004172DF /* InterviewProcess.swift in Sources */,
+				4C1E376E2B9E94290038E7DC /* ListView.swift in Sources */,
+				4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */,
+				4CE226F02BAF8D5A004172DF /* JobCard.swift in Sources */,
+				4CE226F62BAFA167004172DF /* Interview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E374B2B9E8D800038E7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1E37542B9E8D800038E7DC /* JobHopperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1E37552B9E8D800038E7DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1E37602B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift in Sources */,
+				4C1E375E2B9E8D800038E7DC /* JobHopperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C1E37512B9E8D800038E7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1E373E2B9E8D7F0038E7DC /* JobHopper */;
+			targetProxy = 4C1E37502B9E8D800038E7DC /* PBXContainerItemProxy */;
+		};
+		4C1E375B2B9E8D800038E7DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1E373E2B9E8D7F0038E7DC /* JobHopper */;
+			targetProxy = 4C1E375A2B9E8D800038E7DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C1E37612B9E8D800038E7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C1E37622B9E8D800038E7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1E37642B9E8D800038E7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JobHopper/Preview Content\"";
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JobHopper/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C1E37652B9E8D800038E7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"JobHopper/Preview Content\"";
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JobHopper/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4C1E37672B9E8D800038E7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHopper";
+			};
+			name = Debug;
+		};
+		4C1E37682B9E8D800038E7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHopper";
+			};
+			name = Release;
+		};
+		4C1E376A2B9E8D800038E7DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobHopper;
+			};
+			name = Debug;
+		};
+		4C1E376B2B9E8D800038E7DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JobHopper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1E37612B9E8D800038E7DC /* Debug */,
+				4C1E37622B9E8D800038E7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1E37642B9E8D800038E7DC /* Debug */,
+				4C1E37652B9E8D800038E7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1E37672B9E8D800038E7DC /* Debug */,
+				4C1E37682B9E8D800038E7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1E376A2B9E8D800038E7DC /* Debug */,
+				4C1E376B2B9E8D800038E7DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C1E37372B9E8D7F0038E7DC /* Project object */;
+}

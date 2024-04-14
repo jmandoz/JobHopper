@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
-    @Namespace var cardNamespace
-    @Namespace var detailNamespace
+    @Namespace var namespace
     @StateObject var viewModel = ListViewModel()
     @State var showDetail: Bool = false
     @State var selectedStatus: CandidateStatus?
@@ -26,35 +25,32 @@ struct ListView: View {
     
     var body: some View {
         ZStack {
-                // list view
-                VStack {
-                    headerView
-                    listView
-                }
-                .padding(.horizontal)
+            // list view
+            VStack {
+                headerView
+                listView
+            }
+            .padding(.horizontal)
             
-                // full screen detail view
-                if showDetail, let selectedJob = viewModel.selectedJob {
-                    JobDetailView(detailNamespace: detailNamespace,
-                                  cardNamespace: cardNamespace, 
-                                  showDetail: $showDetail,
-                                  job: selectedJob)
-                    .offset(x: offsetX, y: offsetY)
-                    .scaleEffect(scale)
-                    .gesture(
-                        DragGesture()
-                            .onChanged(onDrag(_:))
-                            .onEnded(onDragEnd(_:))
-                    )
-                }
+            // full screen detail view
+            if showDetail, let selectedJob = viewModel.selectedJob {
+                JobDetailView(namespace: namespace,
+                              showDetail: $showDetail,
+                              job: selectedJob)
+                .offset(y: offsetY)
+                .scaleEffect(scale)
+                .gesture(
+                    DragGesture()
+                        .onChanged(onDrag(_:))
+                        .onEnded(onDragEnd(_:))
+                )
+            }
             
         }
     }
     
     private func onDrag(_ value: DragGesture.Value) {
         let dy = value.translation.height
-        let dx = value.translation.width
-        offsetX = dx
         if dy >= 0 {
             offsetY = dy
             scale = 1 - ((dy/deviceHeight)/1.5)
@@ -63,49 +59,18 @@ struct ListView: View {
     
     private func onDragEnd(_ value: DragGesture.Value) {
         let dy = value.translation.height
-        let dx = value.translation.width
-        if dx >= 0 {
-            if dx > deviceWidth / 3 {
-                withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
-                    offsetY = 0
-                    scale = 1
-                }
-            } else {
-                withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
-                    offsetY = 0
-                    scale = 1
-                }
-            }
-        } else {
-            if dx > -(deviceWidth / 3) {
-                withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
-                    offsetY = 0
-                    scale = 1
-                }
-            } else {
-                withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
-                    offsetY = 0
-                    scale = 1
-                }
-            }
-        }
         if dy >= 0 {
             if dy <= deviceHeight / 7.5 {
                 withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
                     offsetY = 0
                     scale = 1
                 }
             } else {
                 withAnimation(.snappy(duration: 0.3)) {
-                    offsetX = 0
+                    viewModel.selectedJob = nil
+                    showDetail.toggle()
                     offsetY = 0
                     scale = 1
-                    showDetail.toggle()
                 }
             }
         }
@@ -113,26 +78,26 @@ struct ListView: View {
     
     private var listView: some View {
         VStack {
-            Picker("Hello", selection: $selectedStatus) {
+            Picker("1", selection: $selectedStatus) {
                 ForEach(statusSelectors) { item in
                     Text(item.rawValue)
                         .tag(CandidateStatus(rawValue: item.rawValue))
                 }
             }
             .pickerStyle(.segmented)
+            .padding(.bottom)
             
             ScrollView(showsIndicators: false) {
                 ForEach(viewModel.jobOpenings) { job in
-                    JobCard(cardNamespace: cardNamespace,
-                            detailNamespace: detailNamespace,
+                    JobCard(namespace: namespace,
                             job: job,
                             showDetail: $showDetail) {
-                        viewModel.selectedJob = job
-                        withAnimation(.snappy(duration: 0.4)){
+                        withAnimation(.snappy(duration: 0.3)){
+                            viewModel.selectedJob = job
                             showDetail.toggle()
                         }
                     }
-                    .padding(.vertical)
+                    .padding(.bottom)
                 }
             }
         }

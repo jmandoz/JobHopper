@@ -40,7 +40,7 @@ struct JobCard: View {
             }
             .matchedGeometryEffect(id: job.id, in: namespace)
             .frame(height: 170)
-            .transition(.scale(scale: 1))
+            .transition(.offset(x: 0, y: 1))
             .onTapGesture {
                 buttonAction()
             }

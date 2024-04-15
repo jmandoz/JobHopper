@@ -34,7 +34,8 @@ struct ListView: View {
             
             // full screen detail view
             if showDetail, let selectedJob = viewModel.selectedJob {
-                JobDetailView(namespace: namespace,
+                JobDetailView(viewModel: viewModel,
+                              namespace: namespace,
                               showDetail: $showDetail,
                               job: selectedJob)
                 .offset(y: offsetY)
@@ -53,7 +54,7 @@ struct ListView: View {
         let dy = value.translation.height
         if dy >= 0 {
             offsetY = dy
-            scale = 1 - ((dy/deviceHeight)/1.5)
+            scale = 1 - ((dy/deviceHeight)/5)
         }
     }
     
@@ -66,9 +67,10 @@ struct ListView: View {
                     scale = 1
                 }
             } else {
+                viewModel.selectedJob = nil
                 withAnimation(.snappy(duration: 0.3)) {
-                    viewModel.selectedJob = nil
                     showDetail.toggle()
+                } completion: {
                     offsetY = 0
                     scale = 1
                 }

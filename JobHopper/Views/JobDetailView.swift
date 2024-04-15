@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct JobDetailView: View {
+    @ObservedObject var viewModel: ListViewModel
     var namespace: Namespace.ID
     @Binding var showDetail: Bool
     
@@ -15,14 +16,16 @@ struct JobDetailView: View {
     
     var body: some View {
         if showDetail {
-            RoundedRectangle(cornerRadius: 25.0)
-                .foregroundStyle(.blue)
-                .overlay {
-                    jobDetailsView
-                }
-                .matchedGeometryEffect(id: job.id, in: namespace)
-                .transition(.scale(scale: 1))
-                .ignoresSafeArea(.all)
+            GeometryReader { proxy in
+                RoundedRectangle(cornerRadius: 25.0)
+                    .foregroundStyle(.blue)
+                    .overlay {
+                        jobDetailsView
+                    }
+            }
+            .ignoresSafeArea(.all)
+            .matchedGeometryEffect(id: job.id, in: namespace)
+            .transition(.offset(x: 0, y: 1))
         }
     }
     
@@ -68,5 +71,5 @@ struct JobDetailView: View {
 
 #Preview("JobDetail", body: {
     @Namespace var namespace
-    return JobDetailView(namespace: namespace, showDetail: .constant(true), job: .init(jobTitle: "Title", company: "Company", status: .applied, interviewProcess: nil))
+    return JobDetailView(viewModel: .init(), namespace: namespace, showDetail: .constant(true), job: .init(jobTitle: "Title", company: "Company", status: .applied, interviewProcess: nil))
 })

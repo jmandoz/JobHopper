@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var selectedTab = 2
     var body: some View {
-        ListView()
+        HomeView()
     }
 }
 

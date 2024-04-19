@@ -30,23 +30,31 @@ struct ListView: View {
                 headerView
                 listView
             }
-            .padding(.horizontal)
+            .padding()
+            if showDetail {
+                RoundedRectangle(cornerRadius: 20.0)
+                    .fill(.black)
+                    .opacity(0.25)
+                    .shadow(radius: 10.0)
+                    .ignoresSafeArea()
+            }
             
             // full screen detail view
             if showDetail, let selectedJob = viewModel.selectedJob {
-                JobDetailView(viewModel: viewModel,
-                              namespace: namespace,
-                              showDetail: $showDetail,
-                              job: selectedJob)
-                .offset(y: offsetY)
-                .scaleEffect(scale)
-                .gesture(
-                    DragGesture()
-                        .onChanged(onDrag(_:))
-                        .onEnded(onDragEnd(_:))
-                )
+                GeometryReader { proxy in
+                    JobDetailView(namespace: namespace,
+                                  showDetail: $showDetail,
+                                  job: selectedJob)
+                    .offset(y: offsetY)
+                    .scaleEffect(scale)
+                    .gesture(
+                        DragGesture()
+                            .onChanged(onDrag(_:))
+                            .onEnded(onDragEnd(_:))
+                    )
+                    .frame(width: proxy.size.width, height: proxy.size.height)
+                }
             }
-            
         }
     }
     
@@ -54,7 +62,7 @@ struct ListView: View {
         let dy = value.translation.height
         if dy >= 0 {
             offsetY = dy
-            scale = 1 - ((dy/deviceHeight)/5)
+            scale = 1 - ((dy/deviceHeight)/6)
         }
     }
     
@@ -62,13 +70,13 @@ struct ListView: View {
         let dy = value.translation.height
         if dy >= 0 {
             if dy <= deviceHeight / 7.5 {
-                withAnimation(.snappy(duration: 0.3)) {
+                withAnimation(.snappy(duration: 0.2)) {
                     offsetY = 0
                     scale = 1
                 }
             } else {
                 viewModel.selectedJob = nil
-                withAnimation(.snappy(duration: 0.3)) {
+                withAnimation(.snappy(duration: 0.2)) {
                     showDetail.toggle()
                 } completion: {
                     offsetY = 0
@@ -91,12 +99,21 @@ struct ListView: View {
             
             ScrollView(showsIndicators: false) {
                 ForEach(viewModel.jobOpenings) { job in
-                    JobCard(namespace: namespace,
-                            job: job,
-                            showDetail: $showDetail) {
-                        withAnimation(.snappy(duration: 0.3)){
-                            viewModel.selectedJob = job
-                            showDetail.toggle()
+                    ZStack {
+                        JobCardComponent(namespace: namespace,
+                                job: job,
+                                showDetail: $showDetail) {
+                            withAnimation(.snappy(duration: 0.2)){
+                                viewModel.selectedJob = job
+                                showDetail.toggle()
+                            }
+                        }
+                        if let selectedJob = viewModel.selectedJob,
+                           job.id == selectedJob.id {
+                            RoundedRectangle(cornerRadius: 25.0)
+                                .frame(maxWidth: .infinity)
+                                .foregroundColor(.blue)
+                                .frame(height: 100)
                         }
                     }
                     .padding(.bottom)
@@ -109,7 +126,7 @@ struct ListView: View {
         VStack {
             Group {
                 Text("\(viewModel.jobOpenings.count) " + (viewModel.jobOpenings.count == 1 ? "job opportunity listed" : "job opportunities listed"))
-                    .font(.JHtitleLarge)
+                    .font(.customFont(type: .lightItalic, size: .mediun))
                 Text("Search bar")
             }
             .frame(maxWidth: .infinity, alignment: .leading)

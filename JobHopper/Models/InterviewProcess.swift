@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct InterviewProcess {
+struct InterviewProcess: Identifiable {
+    let id = UUID().uuidString
     let interviewSteps: [Interview]
     let contact: CompanyContact
 }

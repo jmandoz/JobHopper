@@ -18,9 +18,23 @@
 		4C1E37702B9E948A0038E7DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E376F2B9E948A0038E7DC /* HomeView.swift */; };
 		4C1E37722B9E949D0038E7DC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37712B9E949D0038E7DC /* AccountView.swift */; };
 		4C4CA1432BC85D8700138E92 /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4CA1422BC85D8700138E92 /* JobDetailView.swift */; };
+		4C68B1BC2BD1EF87007844ED /* CooperHewitt-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */; };
+		4C68B1C12BD1EF87007844ED /* CooperHewitt-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C964B4B2BAFB6D00036437A /* CooperHewitt-Medium.otf */; };
+		4C68B1C22BD1EF87007844ED /* CooperHewitt-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */; };
+		4C68B1C32BD1EF87007844ED /* CooperHewitt-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */; };
+		4C68B1C62BD1EF87007844ED /* CooperHewitt-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C964B4C2BAFB6D00036437A /* CooperHewitt-Thin.otf */; };
+		4C68B1D42BD1F658007844ED /* CooperHewitt-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1CB2BD1F658007844ED /* CooperHewitt-BoldItalic.otf */; };
+		4C68B1D52BD1F658007844ED /* CooperHewitt-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1CC2BD1F658007844ED /* CooperHewitt-Bold.otf */; };
+		4C68B1D62BD1F658007844ED /* CooperHewitt-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1CD2BD1F658007844ED /* CooperHewitt-LightItalic.otf */; };
+		4C68B1D72BD1F658007844ED /* CooperHewitt-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1CE2BD1F658007844ED /* CooperHewitt-MediumItalic.otf */; };
+		4C68B1D82BD1F658007844ED /* CooperHewitt-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1CF2BD1F658007844ED /* CooperHewitt-ThinItalic.otf */; };
+		4C68B1D92BD1F658007844ED /* CooperHewitt-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D02BD1F658007844ED /* CooperHewitt-SemiboldItalic.otf */; };
+		4C68B1DA2BD1F658007844ED /* CooperHewitt-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D12BD1F658007844ED /* CooperHewitt-HeavyItalic.otf */; };
+		4C68B1DB2BD1F658007844ED /* CooperHewitt-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D22BD1F658007844ED /* CooperHewitt-Semibold.otf */; };
+		4C68B1DC2BD1F658007844ED /* CooperHewitt-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D32BD1F658007844ED /* CooperHewitt-BookItalic.otf */; };
 		4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C964B482BAFB4520036437A /* Font+Extensions.swift */; };
 		4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EC2BAF8B61004172DF /* JobOpening.swift */; };
-		4CE226F02BAF8D5A004172DF /* JobCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EF2BAF8D5A004172DF /* JobCard.swift */; };
+		4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */; };
 		4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F12BAF8D7E004172DF /* ListViewModel.swift */; };
 		4CE226F42BAF9488004172DF /* InterviewProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F32BAF9488004172DF /* InterviewProcess.swift */; };
 		4CE226F62BAFA167004172DF /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F52BAFA167004172DF /* Interview.swift */; };
@@ -58,25 +72,25 @@
 		4C1E376F2B9E948A0038E7DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4C1E37712B9E949D0038E7DC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		4C4CA1422BC85D8700138E92 /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
+		4C68B1CB2BD1F658007844ED /* CooperHewitt-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-BoldItalic.otf"; path = "../../../../.Trash/CooperHewitt-BoldItalic.otf"; sourceTree = "<group>"; };
+		4C68B1CC2BD1F658007844ED /* CooperHewitt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-Bold.otf"; path = "../../../../.Trash/CooperHewitt-Bold.otf"; sourceTree = "<group>"; };
+		4C68B1CD2BD1F658007844ED /* CooperHewitt-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-LightItalic.otf"; path = "../../../../.Trash/CooperHewitt-LightItalic.otf"; sourceTree = "<group>"; };
+		4C68B1CE2BD1F658007844ED /* CooperHewitt-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-MediumItalic.otf"; path = "../../../../.Trash/CooperHewitt-MediumItalic.otf"; sourceTree = "<group>"; };
+		4C68B1CF2BD1F658007844ED /* CooperHewitt-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-ThinItalic.otf"; path = "../../../../.Trash/CooperHewitt-ThinItalic.otf"; sourceTree = "<group>"; };
+		4C68B1D02BD1F658007844ED /* CooperHewitt-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-SemiboldItalic.otf"; path = "../../../../.Trash/CooperHewitt-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		4C68B1D12BD1F658007844ED /* CooperHewitt-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-HeavyItalic.otf"; path = "../../../../.Trash/CooperHewitt-HeavyItalic.otf"; sourceTree = "<group>"; };
+		4C68B1D22BD1F658007844ED /* CooperHewitt-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-Semibold.otf"; path = "../../../../.Trash/CooperHewitt-Semibold.otf"; sourceTree = "<group>"; };
+		4C68B1D32BD1F658007844ED /* CooperHewitt-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CooperHewitt-BookItalic.otf"; path = "../../../../.Trash/CooperHewitt-BookItalic.otf"; sourceTree = "<group>"; };
 		4C964B482BAFB4520036437A /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		4C964B4A2BAFB5DF0036437A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C964B4B2BAFB6D00036437A /* CooperHewitt-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Medium.otf"; sourceTree = "<group>"; };
 		4C964B4C2BAFB6D00036437A /* CooperHewitt-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Thin.otf"; sourceTree = "<group>"; };
-		4C964B4D2BAFB6D00036437A /* CooperHewitt-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		4C964B4E2BAFB6D00036437A /* CooperHewitt-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-HeavyItalic.otf"; sourceTree = "<group>"; };
-		4C964B4F2BAFB6D00036437A /* CooperHewitt-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Bold.otf"; sourceTree = "<group>"; };
-		4C964B502BAFB6D00036437A /* CooperHewitt-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-LightItalic.otf"; sourceTree = "<group>"; };
 		4C964B512BAFB6D00036437A /* SIL Open Font License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
-		4C964B522BAFB6D00036437A /* CooperHewitt-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-BoldItalic.otf"; sourceTree = "<group>"; };
-		4C964B532BAFB6D00036437A /* CooperHewitt-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-ThinItalic.otf"; sourceTree = "<group>"; };
 		4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Book.otf"; sourceTree = "<group>"; };
 		4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Light.otf"; sourceTree = "<group>"; };
 		4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Heavy.otf"; sourceTree = "<group>"; };
-		4C964B572BAFB6D10036437A /* CooperHewitt-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-MediumItalic.otf"; sourceTree = "<group>"; };
-		4C964B582BAFB6D10036437A /* CooperHewitt-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Semibold.otf"; sourceTree = "<group>"; };
-		4C964B592BAFB6D10036437A /* CooperHewitt-BookItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-BookItalic.otf"; sourceTree = "<group>"; };
 		4CE226EC2BAF8B61004172DF /* JobOpening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOpening.swift; sourceTree = "<group>"; };
-		4CE226EF2BAF8D5A004172DF /* JobCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCard.swift; sourceTree = "<group>"; };
+		4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardComponent.swift; sourceTree = "<group>"; };
 		4CE226F12BAF8D7E004172DF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		4CE226F32BAF9488004172DF /* InterviewProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewProcess.swift; sourceTree = "<group>"; };
 		4CE226F52BAFA167004172DF /* Interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
@@ -137,6 +151,7 @@
 				4C1E376C2B9E905E0038E7DC /* Views */,
 				4CE226EA2BAF87D9004172DF /* ViewModels */,
 				4CE226EE2BAF8D40004172DF /* Components */,
+				4C68B1CA2BD1F177007844ED /* Extensions */,
 				4C964B262BAFB2E60036437A /* Fonts */,
 				4C1E37462B9E8D800038E7DC /* Assets.xcassets */,
 				4C1E37482B9E8D800038E7DC /* Preview Content */,
@@ -180,25 +195,32 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		4C964B262BAFB2E60036437A /* Fonts */ = {
+		4C68B1CA2BD1F177007844ED /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4C964B482BAFB4520036437A /* Font+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C964B262BAFB2E60036437A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
 				4C964B4C2BAFB6D00036437A /* CooperHewitt-Thin.otf */,
-				4C964B4D2BAFB6D00036437A /* CooperHewitt-SemiboldItalic.otf */,
-				4C964B512BAFB6D00036437A /* SIL Open Font License.txt */,
-				4C964B4F2BAFB6D00036437A /* CooperHewitt-Bold.otf */,
-				4C964B522BAFB6D00036437A /* CooperHewitt-BoldItalic.otf */,
-				4C964B532BAFB6D00036437A /* CooperHewitt-ThinItalic.otf */,
 				4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */,
-				4C964B592BAFB6D10036437A /* CooperHewitt-BookItalic.otf */,
 				4C964B4B2BAFB6D00036437A /* CooperHewitt-Medium.otf */,
-				4C964B502BAFB6D00036437A /* CooperHewitt-LightItalic.otf */,
-				4C964B4E2BAFB6D00036437A /* CooperHewitt-HeavyItalic.otf */,
+				4C68B1CC2BD1F658007844ED /* CooperHewitt-Bold.otf */,
+				4C68B1CB2BD1F658007844ED /* CooperHewitt-BoldItalic.otf */,
+				4C68B1D32BD1F658007844ED /* CooperHewitt-BookItalic.otf */,
+				4C68B1D12BD1F658007844ED /* CooperHewitt-HeavyItalic.otf */,
+				4C68B1CD2BD1F658007844ED /* CooperHewitt-LightItalic.otf */,
+				4C68B1CE2BD1F658007844ED /* CooperHewitt-MediumItalic.otf */,
+				4C68B1D22BD1F658007844ED /* CooperHewitt-Semibold.otf */,
+				4C68B1D02BD1F658007844ED /* CooperHewitt-SemiboldItalic.otf */,
+				4C68B1CF2BD1F658007844ED /* CooperHewitt-ThinItalic.otf */,
 				4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */,
 				4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */,
-				4C964B572BAFB6D10036437A /* CooperHewitt-MediumItalic.otf */,
-				4C964B582BAFB6D10036437A /* CooperHewitt-Semibold.otf */,
+				4C964B512BAFB6D00036437A /* SIL Open Font License.txt */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -224,7 +246,7 @@
 		4CE226EE2BAF8D40004172DF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4CE226EF2BAF8D5A004172DF /* JobCard.swift */,
+				4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -334,7 +356,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1E374A2B9E8D800038E7DC /* Preview Assets.xcassets in Resources */,
+				4C68B1D62BD1F658007844ED /* CooperHewitt-LightItalic.otf in Resources */,
+				4C68B1C12BD1EF87007844ED /* CooperHewitt-Medium.otf in Resources */,
+				4C68B1D72BD1F658007844ED /* CooperHewitt-MediumItalic.otf in Resources */,
+				4C68B1BC2BD1EF87007844ED /* CooperHewitt-Heavy.otf in Resources */,
+				4C68B1D42BD1F658007844ED /* CooperHewitt-BoldItalic.otf in Resources */,
+				4C68B1D52BD1F658007844ED /* CooperHewitt-Bold.otf in Resources */,
 				4C1E37472B9E8D800038E7DC /* Assets.xcassets in Resources */,
+				4C68B1C62BD1EF87007844ED /* CooperHewitt-Thin.otf in Resources */,
+				4C68B1D92BD1F658007844ED /* CooperHewitt-SemiboldItalic.otf in Resources */,
+				4C68B1DA2BD1F658007844ED /* CooperHewitt-HeavyItalic.otf in Resources */,
+				4C68B1DB2BD1F658007844ED /* CooperHewitt-Semibold.otf in Resources */,
+				4C68B1D82BD1F658007844ED /* CooperHewitt-ThinItalic.otf in Resources */,
+				4C68B1DC2BD1F658007844ED /* CooperHewitt-BookItalic.otf in Resources */,
+				4C68B1C22BD1EF87007844ED /* CooperHewitt-Light.otf in Resources */,
+				4C68B1C32BD1EF87007844ED /* CooperHewitt-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +405,7 @@
 				4CE226F42BAF9488004172DF /* InterviewProcess.swift in Sources */,
 				4C1E376E2B9E94290038E7DC /* ListView.swift in Sources */,
 				4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */,
-				4CE226F02BAF8D5A004172DF /* JobCard.swift in Sources */,
+				4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */,
 				4CE226F62BAFA167004172DF /* Interview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,8 +577,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -571,8 +607,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

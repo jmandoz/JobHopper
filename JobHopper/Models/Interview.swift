@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Interview {
+struct Interview: Identifiable {
+    var id = UUID().uuidString
+    
     let title: String
     let desctription: String
     let time: Int?

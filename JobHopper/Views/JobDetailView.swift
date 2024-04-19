@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct JobDetailView: View {
-    @ObservedObject var viewModel: ListViewModel
     var namespace: Namespace.ID
     @Binding var showDetail: Bool
     
@@ -23,30 +22,52 @@ struct JobDetailView: View {
                         jobDetailsView
                     }
             }
-            .ignoresSafeArea(.all)
             .matchedGeometryEffect(id: job.id, in: namespace)
             .transition(.offset(x: 0, y: 1))
+            .ignoresSafeArea(edges: .all)
         }
     }
     
     private var jobDetailsView: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 15) {
+            VStack(alignment: .leading, spacing: 20) {
                 Text(job.jobTitle)
-                    .font(.JHtitleXtraLarge)
+                    .font(.customFont(type: .light, size: .xtraLarge))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 35)
                     .truncationMode(.tail)
                 HStack {
                     Text(job.company)
-                        .font(.JHtitleSmall)
+                        .font(.customFont(type: .medium, size: .mediun))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .truncationMode(.tail)
                     Spacer()
                     Text(job.status.rawValue)
-                        .font(.JHtitleSmall)
+                        .font(.customFont(type: .medium, size: .mediun))
                         .truncationMode(.tail)
                 }
+                if let interviewProcess = job.interviewProcess {
+                    VStack(alignment: .leading) {
+                        ForEach(interviewProcess.interviewSteps) { step in
+                            HStack {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 1)
+                                        .frame(width: 4, height: 60)
+                                        .foregroundStyle(step.id != interviewProcess.interviewSteps.last?.id ? .white : .clear)
+                                        .transformEffect(.init(translationX: 0, y: 23))
+                                    
+                                    Circle()
+                                        .frame(width: 30, height: 30)
+                                        .foregroundStyle(.white)
+                                }
+                                Text(step.title)
+                                Spacer()
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                    }
+                }
+                
                 Spacer()
                 Button(action: {
                     // todo: button action to
@@ -55,7 +76,7 @@ struct JobDetailView: View {
                         .foregroundStyle(.white)
                         .overlay {
                             Text("Update")
-                                .font(.JHtitleMedium)
+                                .font(.customFont(type: .medium, size: .mediun))
                                 .frame(maxWidth: .infinity)
                         }
                         .frame(height: 48)
@@ -71,5 +92,12 @@ struct JobDetailView: View {
 
 #Preview("JobDetail", body: {
     @Namespace var namespace
-    return JobDetailView(viewModel: .init(), namespace: namespace, showDetail: .constant(true), job: .init(jobTitle: "Title", company: "Company", status: .applied, interviewProcess: nil))
+    return JobDetailView(namespace: namespace,
+                         showDetail: .constant(true),
+                         job: .init(jobTitle: "Title",
+                                    company: "Company",
+                                    status: .applied,
+                                    interviewProcess: .init(interviewSteps: [.init(title: "Title", desctription: "Description", time: 15),
+                                        .init(title: "Title", desctription: "Description", time: 30), .init(title: "Title", desctription: "Description", time: 45), 
+                                        .init(title: "Title", desctription: "Description", time: 60)], contact: .init(name: "Contact name", email: "email"))))
 })

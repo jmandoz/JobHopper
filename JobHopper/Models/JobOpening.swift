@@ -13,7 +13,7 @@ struct JobOpening: Identifiable {
     let jobTitle: String
     let company: String
     let status: CandidateStatus
-    let interviewProcess: [InterviewProcess]?
+    let interviewProcess: InterviewProcess?
 }
 
 enum CandidateStatus: String, CaseIterable, Identifiable {

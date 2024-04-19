@@ -1,6 +1,6 @@
 //
 //  ActivityComponent.swift
-//  JobHopper
+//  JobHoppr
 //
 //  Created by Jason Mandozzi on 4/19/24.
 //

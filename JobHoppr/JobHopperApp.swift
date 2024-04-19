@@ -1,6 +1,6 @@
 //
-//  JobHopperApp.swift
-//  JobHopper
+//  JobHopprApp.swift
+//  JobHoppr
 //
 //  Created by Jason Mandozzi on 3/10/24.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct JobHopperApp: App {
+struct JobHopprApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

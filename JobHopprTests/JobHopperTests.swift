@@ -1,14 +1,14 @@
 //
-//  JobHopperTests.swift
-//  JobHopperTests
+//  JobHopprTests.swift
+//  JobHopprTests
 //
 //  Created by Jason Mandozzi on 3/10/24.
 //
 
 import XCTest
-@testable import JobHopper
+@testable import JobHoppr
 
-final class JobHopperTests: XCTestCase {
+final class JobHopprTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

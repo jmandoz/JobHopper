@@ -59,14 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E373F2B9E8D7F0038E7DC /* JobHoppr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHoppr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperApp.swift; sourceTree = "<group>"; };
 		4C1E37442B9E8D7F0038E7DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C1E37462B9E8D800038E7DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1E37492B9E8D800038E7DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E374F2B9E8D800038E7DC /* JobHopprTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopprTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1E37532B9E8D800038E7DC /* JobHopperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperTests.swift; sourceTree = "<group>"; };
-		4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1E37592B9E8D800038E7DC /* JobHopprUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JobHopprUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1E375D2B9E8D800038E7DC /* JobHopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperUITests.swift; sourceTree = "<group>"; };
 		4C1E375F2B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C1E376D2B9E94290038E7DC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 		4C1E37362B9E8D7F0038E7DC = {
 			isa = PBXGroup;
 			children = (
-				4C1E37412B9E8D7F0038E7DC /* JobHopper */,
-				4C1E37522B9E8D800038E7DC /* JobHopperTests */,
-				4C1E375C2B9E8D800038E7DC /* JobHopperUITests */,
+				4C1E37412B9E8D7F0038E7DC /* JobHoppr */,
+				4C1E37522B9E8D800038E7DC /* JobHopprTests */,
+				4C1E375C2B9E8D800038E7DC /* JobHopprUITests */,
 				4C1E37402B9E8D7F0038E7DC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,14 +136,14 @@
 		4C1E37402B9E8D7F0038E7DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */,
-				4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */,
-				4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */,
+				4C1E373F2B9E8D7F0038E7DC /* JobHoppr.app */,
+				4C1E374F2B9E8D800038E7DC /* JobHopprTests.xctest */,
+				4C1E37592B9E8D800038E7DC /* JobHopprUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C1E37412B9E8D7F0038E7DC /* JobHopper */ = {
+		4C1E37412B9E8D7F0038E7DC /* JobHoppr */ = {
 			isa = PBXGroup;
 			children = (
 				4C964B4A2BAFB5DF0036437A /* Info.plist */,
@@ -158,7 +158,7 @@
 				4C1E37462B9E8D800038E7DC /* Assets.xcassets */,
 				4C1E37482B9E8D800038E7DC /* Preview Content */,
 			);
-			path = JobHopper;
+			path = JobHoppr;
 			sourceTree = "<group>";
 		};
 		4C1E37482B9E8D800038E7DC /* Preview Content */ = {
@@ -169,21 +169,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		4C1E37522B9E8D800038E7DC /* JobHopperTests */ = {
+		4C1E37522B9E8D800038E7DC /* JobHopprTests */ = {
 			isa = PBXGroup;
 			children = (
 				4C1E37532B9E8D800038E7DC /* JobHopperTests.swift */,
 			);
-			path = JobHopperTests;
+			path = JobHopprTests;
 			sourceTree = "<group>";
 		};
-		4C1E375C2B9E8D800038E7DC /* JobHopperUITests */ = {
+		4C1E375C2B9E8D800038E7DC /* JobHopprUITests */ = {
 			isa = PBXGroup;
 			children = (
 				4C1E375D2B9E8D800038E7DC /* JobHopperUITests.swift */,
 				4C1E375F2B9E8D800038E7DC /* JobHopperUITestsLaunchTests.swift */,
 			);
-			path = JobHopperUITests;
+			path = JobHopprUITests;
 			sourceTree = "<group>";
 		};
 		4C1E376C2B9E905E0038E7DC /* Views */ = {
@@ -257,9 +257,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C1E373E2B9E8D7F0038E7DC /* JobHopper */ = {
+		4C1E373E2B9E8D7F0038E7DC /* JobHoppr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopper" */;
+			buildConfigurationList = 4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHoppr" */;
 			buildPhases = (
 				4C1E373B2B9E8D7F0038E7DC /* Sources */,
 				4C1E373C2B9E8D7F0038E7DC /* Frameworks */,
@@ -269,14 +269,14 @@
 			);
 			dependencies = (
 			);
-			name = JobHopper;
+			name = JobHoppr;
 			productName = JobHopper;
-			productReference = 4C1E373F2B9E8D7F0038E7DC /* JobHopper.app */;
+			productReference = 4C1E373F2B9E8D7F0038E7DC /* JobHoppr.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4C1E374E2B9E8D800038E7DC /* JobHopperTests */ = {
+		4C1E374E2B9E8D800038E7DC /* JobHopprTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperTests" */;
+			buildConfigurationList = 4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopprTests" */;
 			buildPhases = (
 				4C1E374B2B9E8D800038E7DC /* Sources */,
 				4C1E374C2B9E8D800038E7DC /* Frameworks */,
@@ -287,14 +287,14 @@
 			dependencies = (
 				4C1E37512B9E8D800038E7DC /* PBXTargetDependency */,
 			);
-			name = JobHopperTests;
+			name = JobHopprTests;
 			productName = JobHopperTests;
-			productReference = 4C1E374F2B9E8D800038E7DC /* JobHopperTests.xctest */;
+			productReference = 4C1E374F2B9E8D800038E7DC /* JobHopprTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4C1E37582B9E8D800038E7DC /* JobHopperUITests */ = {
+		4C1E37582B9E8D800038E7DC /* JobHopprUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperUITests" */;
+			buildConfigurationList = 4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopprUITests" */;
 			buildPhases = (
 				4C1E37552B9E8D800038E7DC /* Sources */,
 				4C1E37562B9E8D800038E7DC /* Frameworks */,
@@ -305,9 +305,9 @@
 			dependencies = (
 				4C1E375B2B9E8D800038E7DC /* PBXTargetDependency */,
 			);
-			name = JobHopperUITests;
+			name = JobHopprUITests;
 			productName = JobHopperUITests;
-			productReference = 4C1E37592B9E8D800038E7DC /* JobHopperUITests.xctest */;
+			productReference = 4C1E37592B9E8D800038E7DC /* JobHopprUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +333,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHopper" */;
+			buildConfigurationList = 4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHoppr" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -346,9 +346,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C1E373E2B9E8D7F0038E7DC /* JobHopper */,
-				4C1E374E2B9E8D800038E7DC /* JobHopperTests */,
-				4C1E37582B9E8D800038E7DC /* JobHopperUITests */,
+				4C1E373E2B9E8D7F0038E7DC /* JobHoppr */,
+				4C1E374E2B9E8D800038E7DC /* JobHopprTests */,
+				4C1E37582B9E8D800038E7DC /* JobHopprUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,12 +436,12 @@
 /* Begin PBXTargetDependency section */
 		4C1E37512B9E8D800038E7DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C1E373E2B9E8D7F0038E7DC /* JobHopper */;
+			target = 4C1E373E2B9E8D7F0038E7DC /* JobHoppr */;
 			targetProxy = 4C1E37502B9E8D800038E7DC /* PBXContainerItemProxy */;
 		};
 		4C1E375B2B9E8D800038E7DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4C1E373E2B9E8D7F0038E7DC /* JobHopper */;
+			target = 4C1E373E2B9E8D7F0038E7DC /* JobHoppr */;
 			targetProxy = 4C1E375A2B9E8D800038E7DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -573,11 +573,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"JobHopper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JobHoppr/Preview Content\"";
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JobHopper/Info.plist;
+				INFOPLIST_FILE = JobHoppr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -588,7 +588,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHoppr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -603,11 +603,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"JobHopper/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"JobHoppr/Preview Content\"";
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JobHopper/Info.plist;
+				INFOPLIST_FILE = JobHoppr/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -618,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHoppr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,12 +637,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopprTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHopper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHoppr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHoppr";
 			};
 			name = Debug;
 		};
@@ -657,12 +657,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopprTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHopper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHopper";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JobHoppr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JobHoppr";
 			};
 			name = Release;
 		};
@@ -675,12 +675,12 @@
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopprUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JobHopper;
+				TEST_TARGET_NAME = JobHoppr;
 			};
 			name = Debug;
 		};
@@ -693,19 +693,19 @@
 				DEVELOPMENT_TEAM = 3ZLX8VSJT3;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopperUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jbm.JobHopprUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = JobHopper;
+				TEST_TARGET_NAME = JobHoppr;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHopper" */ = {
+		4C1E373A2B9E8D7F0038E7DC /* Build configuration list for PBXProject "JobHoppr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C1E37612B9E8D800038E7DC /* Debug */,
@@ -714,7 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopper" */ = {
+		4C1E37632B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHoppr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C1E37642B9E8D800038E7DC /* Debug */,
@@ -723,7 +723,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperTests" */ = {
+		4C1E37662B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopprTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C1E37672B9E8D800038E7DC /* Debug */,
@@ -732,7 +732,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopperUITests" */ = {
+		4C1E37692B9E8D800038E7DC /* Build configuration list for PBXNativeTarget "JobHopprUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C1E376A2B9E8D800038E7DC /* Debug */,

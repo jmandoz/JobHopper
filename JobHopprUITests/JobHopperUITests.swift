@@ -1,13 +1,13 @@
 //
-//  JobHopperUITests.swift
-//  JobHopperUITests
+//  JobHopprUITests.swift
+//  JobHopprUITests
 //
 //  Created by Jason Mandozzi on 3/10/24.
 //
 
 import XCTest
 
-final class JobHopperUITests: XCTestCase {
+final class JobHopprUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

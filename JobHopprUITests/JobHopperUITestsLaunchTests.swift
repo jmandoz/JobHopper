@@ -1,13 +1,13 @@
 //
-//  JobHopperUITestsLaunchTests.swift
-//  JobHopperUITests
+//  JobHopprUITestsLaunchTests.swift
+//  JobHopprUITests
 //
 //  Created by Jason Mandozzi on 3/10/24.
 //
 
 import XCTest
 
-final class JobHopperUITestsLaunchTests: XCTestCase {
+final class JobHopprUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

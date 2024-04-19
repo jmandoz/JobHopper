@@ -1,6 +1,6 @@
 //
 //  ListViewModel.swift
-//  JobHopper
+//  JobHoppr
 //
 //  Created by Jason Mandozzi on 3/23/24.
 //

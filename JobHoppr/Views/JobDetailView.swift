@@ -1,6 +1,6 @@
 //
 //  JobDetailView.swift
-//  JobHopper
+//  JobHoppr
 //
 //  Created by Jason Mandozzi on 4/11/24.
 //

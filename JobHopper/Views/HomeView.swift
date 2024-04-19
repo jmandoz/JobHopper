@@ -8,15 +8,63 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Namespace var namespace
+    @StateObject var viewModel = ListViewModel()
+    
+    @State var offsetY: CGFloat = 0
+    @State var offsetX: CGFloat = 0
+    @State var scale: CGFloat = 1
+    @State var showDetail: Bool = false
+    
+    private let detailOpenDuration = 0.2
+    
+    private let deviceHeight = UIScreen.self.main.bounds.height
+    private let deviceWidth = UIScreen.self.main.bounds.width
+    
     var body: some View {
         GeometryReader { proxy in
             ZStack {
-                // Background
-                headerBackground(height: proxy.size.height)
-                // Foreground
-                headerForeground()
+                // Main home view
+                homeView(height: proxy.size.height)
+                
+                // full screen detail view
+                if showDetail, let selectedJob = viewModel.selectedJob {
+                    JobDetailView(namespace: namespace,
+                                  showDetail: $showDetail,
+                                  job: selectedJob)
+                    .offset(y: offsetY)
+                    .scaleEffect(scale)
+                    .gesture(
+                        DragGesture()
+                            .onChanged(onDrag(_:))
+                            .onEnded(onDragEnd(_:))
+                    )
+                    .frame(width: proxy.size.width,
+                           height: proxy.size.height)
+                    
+                }
             }
-            .background(.primary900.opacity(0.6))
+            .frame(maxWidth: .infinity)
+            .background(.primaryBackground)
+        }
+    }
+    
+    private func homeView(height: CGFloat) -> some View {
+        VStack {
+            headerView(height: height)
+            Spacer()
+            ListView(viewModel: viewModel,
+                     showDetail: $showDetail,
+                     namespace: namespace)
+        }
+    }
+    
+    private func headerView(height: CGFloat) -> some View {
+        ZStack(alignment: .top) {
+            // Background
+            headerBackground(height: height)
+            // Foreground
+            headerForeground()
         }
     }
     
@@ -24,43 +72,41 @@ struct HomeView: View {
         VStack {
             ZStack {
                 Text("JobHoppr")
-                    .font(.customFont(type: .heavyItalic, size: .mediun))
+                    .font(.customFont(type: .heavy, size: .medium))
+                
                 HStack(alignment: .center) {
                     Image("profilePicture")
                         .resizable()
                         .clipShape(Circle())
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
-                        .overlay {
-                            Circle()
-                                .stroke(.primary100.opacity(0.3), lineWidth: 2)
-                                .scaleEffect(1.04)
-                        }
+                        .shadow(radius: 2)
                     Spacer()
                     Image(systemName: "bell.fill")
                         .resizable()
                         .frame(width: 25, height: 25)
                 }
             }
-            .padding(.bottom, 45)
+            Text("Welcome back, Jason")
+                .font(.customFont(type: .book, size: .large))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 15)
+                .padding(.bottom, 30)
             HStack(spacing: 16) {
                 homeCard(number: "3", label: "Interviews lined up")
                 homeCard(number: "1", label: "Intro call scheduled")
             }
-            
-            Spacer()
         }
         .padding()
     }
     
     private func headerBackground(height: CGFloat) -> some View {
         VStack {
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: 10)
                 .ignoresSafeArea(.all)
-                .frame(height: height / 3.5)
+                .frame(height: height / 3.3)
                 .frame(maxWidth: .infinity)
                 .foregroundStyle(.primary500)
-            Spacer()
         }
     }
     
@@ -73,7 +119,7 @@ struct HomeView: View {
                 VStack {
                     HStack {
                         Text(number)
-                            .font(.customFont(type: .heavy, size: .xtraLarge))
+                            .font(.customFont(type: .semiBold, size: .xtraLarge))
                             .truncationMode(.tail)
                             .padding(8)
                         Spacer()
@@ -81,13 +127,42 @@ struct HomeView: View {
                     Spacer()
                     HStack {
                         Text(label)
-                            .font(.customFont(type: .heavy, size: .small))
+                            .font(.customFont(type: .medium, size: .small))
                             .truncationMode(.tail)
+                            .lineSpacing(6)
                         Spacer()
                     }
                 }
                 .padding()
             }
+    }
+    
+    private func onDrag(_ value: DragGesture.Value) {
+        let dy = value.translation.height
+        if dy >= 0 {
+            offsetY = dy
+            scale = 1 - ((dy/deviceHeight)/6)
+        }
+    }
+    
+    private func onDragEnd(_ value: DragGesture.Value) {
+        let dy = value.translation.height
+        if dy >= 0 {
+            if dy <= deviceHeight / 7.5 {
+                withAnimation(.snappy(duration: 0.2)) {
+                    offsetY = 0
+                    scale = 1
+                }
+            } else {
+                viewModel.selectedJob = nil
+                withAnimation(.snappy(duration: 0.2)) {
+                    showDetail.toggle()
+                } completion: {
+                    offsetY = 0
+                    scale = 1
+                }
+            }
+        }
     }
 }
 

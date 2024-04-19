@@ -15,10 +15,11 @@ extension Font {
 }
 
 enum FontSize: CGFloat {
-    case xtraLarge = 46
-    case large = 32
-    case mediun = 24
-    case small = 16
+    case xtraLarge = 42
+    case large = 34
+    case medium = 26
+    case small = 18
+    case xtraSmall = 14
 }
 
 enum CooperHewitt: String {

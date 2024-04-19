@@ -33,6 +33,7 @@
 		4C68B1DB2BD1F658007844ED /* CooperHewitt-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D22BD1F658007844ED /* CooperHewitt-Semibold.otf */; };
 		4C68B1DC2BD1F658007844ED /* CooperHewitt-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D32BD1F658007844ED /* CooperHewitt-BookItalic.otf */; };
 		4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C964B482BAFB4520036437A /* Font+Extensions.swift */; };
+		4CBD804D2BD2B7A20072EA1A /* ActivityComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */; };
 		4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EC2BAF8B61004172DF /* JobOpening.swift */; };
 		4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */; };
 		4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F12BAF8D7E004172DF /* ListViewModel.swift */; };
@@ -89,6 +90,7 @@
 		4C964B542BAFB6D00036437A /* CooperHewitt-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Book.otf"; sourceTree = "<group>"; };
 		4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Light.otf"; sourceTree = "<group>"; };
 		4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Heavy.otf"; sourceTree = "<group>"; };
+		4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityComponent.swift; sourceTree = "<group>"; };
 		4CE226EC2BAF8B61004172DF /* JobOpening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOpening.swift; sourceTree = "<group>"; };
 		4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardComponent.swift; sourceTree = "<group>"; };
 		4CE226F12BAF8D7E004172DF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */,
+				4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */,
 				4C1E37452B9E8D7F0038E7DC /* ContentView.swift in Sources */,
 				4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */,
+				4CBD804D2BD2B7A20072EA1A /* ActivityComponent.swift in Sources */,
 				4C4CA1432BC85D8700138E92 /* JobDetailView.swift in Sources */,
 				4C1E37702B9E948A0038E7DC /* HomeView.swift in Sources */,
 				4C1E37722B9E949D0038E7DC /* AccountView.swift in Sources */,

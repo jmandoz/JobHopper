@@ -10,30 +10,14 @@ import SwiftUI
 struct JobCardComponent: View {
     var namespace: Namespace.ID
     @State var job: JobOpening
+    @State var showDivider: Bool = true
     @Binding var showDetail: Bool
     let buttonAction: (() -> Void)
     
     var body: some View {
         if !showDetail {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.blue)
-                VStack(alignment: .leading) {
-                    Group {
-                        Text(job.jobTitle)
-                            .truncationMode(.tail)
-                        Spacer()
-                        HStack {
-                            Text(job.company)
-                            Spacer()
-                            Text(job.status.rawValue)
-                        }
-                        .truncationMode(.tail)
-                        .font(.customFont(type: .boldItalic, size: .large))
-                    }
-                }
-                .padding()
+            VStack {
+                detailView
             }
             .matchedGeometryEffect(id: job.id, in: namespace)
             .frame(height: 100)
@@ -42,30 +26,39 @@ struct JobCardComponent: View {
                 buttonAction()
             }
         } else {
-            ZStack {
-                RoundedRectangle(cornerRadius: 18)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.blue)
-                VStack(alignment: .leading) {
-                    Group {
-                        Text(job.jobTitle)
-                            .font(.customFont(type: .medium, size: .mediun))
-                            .truncationMode(.tail)
-                        Spacer()
-                        HStack {
-                            Text(job.company)
-                                .font(.customFont(type: .medium, size: .mediun))
-                                .truncationMode(.tail)
-                            Spacer()
-                            Text(job.status.rawValue)
-                                .font(.customFont(type: .medium, size: .mediun))
-                                .truncationMode(.tail)
-                        }
-                    }
-                }
-                .padding()
+            VStack {
+                detailView
             }
             .frame(height: 100)
+        }
+    }
+    
+    private var detailView: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 18)
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.gray.opacity(0.1))
+            VStack(alignment: .leading) {
+                Text(job.jobTitle)
+                    .font(.customFont(type: .medium, size: .small))
+                    .truncationMode(.tail)
+                Spacer()
+                HStack(alignment: .bottom) {
+                    Text(job.company)
+                        .font(.customFont(type: .light, size: .small))
+                        .truncationMode(.tail)
+                    Spacer()
+                    Text(job.status.rawValue)
+                        .font(.customFont(type: .bold, size: .xtraSmall))
+                        .padding(.vertical, 4)
+                        .padding(.horizontal)
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .foregroundStyle(.green700)
+                        )
+                }
+            }
+            .padding()
         }
     }
 }

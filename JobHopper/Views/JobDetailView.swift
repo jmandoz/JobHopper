@@ -15,16 +15,14 @@ struct JobDetailView: View {
     
     var body: some View {
         if showDetail {
-            GeometryReader { proxy in
-                RoundedRectangle(cornerRadius: 25.0)
-                    .foregroundStyle(.blue)
-                    .overlay {
-                        jobDetailsView
-                    }
-            }
-            .matchedGeometryEffect(id: job.id, in: namespace)
-            .transition(.offset(x: 0, y: 1))
-            .ignoresSafeArea(edges: .all)
+            RoundedRectangle(cornerRadius: 25.0)
+                .foregroundStyle(.primaryBackground)
+                .overlay {
+                    jobDetailsView
+                }
+                .matchedGeometryEffect(id: job.id, in: namespace)
+                .transition(.offset(x: 0, y: 1))
+                .ignoresSafeArea(edges: .all)
         }
     }
     
@@ -38,12 +36,12 @@ struct JobDetailView: View {
                     .truncationMode(.tail)
                 HStack {
                     Text(job.company)
-                        .font(.customFont(type: .medium, size: .mediun))
+                        .font(.customFont(type: .medium, size: .medium))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .truncationMode(.tail)
                     Spacer()
                     Text(job.status.rawValue)
-                        .font(.customFont(type: .medium, size: .mediun))
+                        .font(.customFont(type: .medium, size: .medium))
                         .truncationMode(.tail)
                 }
                 if let interviewProcess = job.interviewProcess {
@@ -53,14 +51,15 @@ struct JobDetailView: View {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 1)
                                         .frame(width: 4, height: 60)
-                                        .foregroundStyle(step.id != interviewProcess.interviewSteps.last?.id ? .white : .clear)
+                                        .foregroundStyle(step.id != interviewProcess.interviewSteps.last?.id ? .primary500 : .clear)
                                         .transformEffect(.init(translationX: 0, y: 23))
                                     
                                     Circle()
                                         .frame(width: 30, height: 30)
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.primary500)
                                 }
                                 Text(step.title)
+                                    .font(.customFont(type: .medium, size: .small))
                                 Spacer()
                             }
                             .frame(maxWidth: .infinity)
@@ -73,11 +72,12 @@ struct JobDetailView: View {
                     // todo: button action to
                 }, label: {
                     RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.primary500)
                         .overlay {
                             Text("Update")
-                                .font(.customFont(type: .medium, size: .mediun))
+                                .font(.customFont(type: .semiBold, size: .small))
                                 .frame(maxWidth: .infinity)
+                                .foregroundStyle(.primary900)
                         }
                         .frame(height: 48)
                 })

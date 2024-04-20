@@ -34,6 +34,10 @@
 		4C68B1DC2BD1F658007844ED /* CooperHewitt-BookItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C68B1D32BD1F658007844ED /* CooperHewitt-BookItalic.otf */; };
 		4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C964B482BAFB4520036437A /* Font+Extensions.swift */; };
 		4CBD804D2BD2B7A20072EA1A /* ActivityComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */; };
+		4CBD804F2BD440F30072EA1A /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD804E2BD440F30072EA1A /* LogInView.swift */; };
+		4CBD80512BD441040072EA1A /* TextFieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD80502BD441040072EA1A /* TextFieldComponent.swift */; };
+		4CBD80532BD452EC0072EA1A /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD80522BD452EC0072EA1A /* ButtonComponent.swift */; };
+		4CBD80552BD458730072EA1A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBD80542BD458720072EA1A /* SignUpView.swift */; };
 		4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EC2BAF8B61004172DF /* JobOpening.swift */; };
 		4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */; };
 		4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE226F12BAF8D7E004172DF /* ListViewModel.swift */; };
@@ -91,6 +95,10 @@
 		4C964B552BAFB6D00036437A /* CooperHewitt-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Light.otf"; sourceTree = "<group>"; };
 		4C964B562BAFB6D00036437A /* CooperHewitt-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CooperHewitt-Heavy.otf"; sourceTree = "<group>"; };
 		4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityComponent.swift; sourceTree = "<group>"; };
+		4CBD804E2BD440F30072EA1A /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		4CBD80502BD441040072EA1A /* TextFieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldComponent.swift; sourceTree = "<group>"; };
+		4CBD80522BD452EC0072EA1A /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		4CBD80542BD458720072EA1A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		4CE226EC2BAF8B61004172DF /* JobOpening.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOpening.swift; sourceTree = "<group>"; };
 		4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCardComponent.swift; sourceTree = "<group>"; };
 		4CE226F12BAF8D7E004172DF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
@@ -193,6 +201,8 @@
 				4C1E376F2B9E948A0038E7DC /* HomeView.swift */,
 				4C1E37712B9E949D0038E7DC /* AccountView.swift */,
 				4C4CA1422BC85D8700138E92 /* JobDetailView.swift */,
+				4CBD804E2BD440F30072EA1A /* LogInView.swift */,
+				4CBD80542BD458720072EA1A /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +260,8 @@
 			children = (
 				4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */,
 				4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */,
+				4CBD80502BD441040072EA1A /* TextFieldComponent.swift */,
+				4CBD80522BD452EC0072EA1A /* ButtonComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -406,11 +418,15 @@
 				4C1E37702B9E948A0038E7DC /* HomeView.swift in Sources */,
 				4C1E37722B9E949D0038E7DC /* AccountView.swift in Sources */,
 				4C1E37432B9E8D7F0038E7DC /* JobHopperApp.swift in Sources */,
+				4CBD804F2BD440F30072EA1A /* LogInView.swift in Sources */,
 				4CE226F42BAF9488004172DF /* InterviewProcess.swift in Sources */,
 				4C1E376E2B9E94290038E7DC /* ListView.swift in Sources */,
 				4CE226F22BAF8D7E004172DF /* ListViewModel.swift in Sources */,
+				4CBD80552BD458730072EA1A /* SignUpView.swift in Sources */,
 				4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */,
+				4CBD80512BD441040072EA1A /* TextFieldComponent.swift in Sources */,
 				4CE226F62BAFA167004172DF /* Interview.swift in Sources */,
+				4CBD80532BD452EC0072EA1A /* ButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

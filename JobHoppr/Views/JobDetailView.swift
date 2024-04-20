@@ -82,7 +82,6 @@ struct JobDetailView: View {
                         .frame(height: 48)
                 })
                 .frame(maxWidth: .infinity)
-                .padding(.bottom, 100)
             }
             .padding(.top, 35)
             .padding(.horizontal)

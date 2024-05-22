@@ -32,17 +32,21 @@ struct JobDetailView: View {
                 Text(job.jobTitle)
                     .font(.customFont(type: .light, size: .xtraLarge))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 35)
+                    .padding(.top, 50)
                     .truncationMode(.tail)
                 HStack {
                     Text(job.company)
-                        .font(.customFont(type: .medium, size: .medium))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.customFont(type: .light, size: .small))
                         .truncationMode(.tail)
                     Spacer()
                     Text(job.status.rawValue)
-                        .font(.customFont(type: .medium, size: .medium))
-                        .truncationMode(.tail)
+                        .font(.customFont(type: .bold, size: .xtraSmall))
+                        .padding(.vertical, 4)
+                        .padding(.horizontal)
+                        .background(
+                            RoundedRectangle(cornerRadius: 25)
+                                .foregroundStyle(.green700)
+                        )
                 }
                 if let interviewProcess = job.interviewProcess {
                     VStack(alignment: .leading) {
@@ -68,24 +72,26 @@ struct JobDetailView: View {
                 }
                 
                 Spacer()
-                Button(action: {
-                    // todo: button action to
-                }, label: {
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(.primary500)
-                        .overlay {
-                            Text("Update")
-                                .font(.customFont(type: .semiBold, size: .small))
-                                .frame(maxWidth: .infinity)
-                                .foregroundStyle(.primary900)
-                        }
-                        .frame(height: 48)
-                })
-                .frame(maxWidth: .infinity)
             }
-            .padding(.top, 35)
-            .padding(.horizontal)
         }
+        .safeAreaInset(edge: .bottom) {
+            Button(action: {
+                // todo: button action to
+            }, label: {
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundStyle(.primary500)
+                    .overlay {
+                        Text("Update")
+                            .font(.customFont(type: .semiBold, size: .small))
+                            .frame(maxWidth: .infinity)
+                            .foregroundStyle(.primary900)
+                    }
+                    .frame(height: 48)
+            })
+            .frame(maxWidth: .infinity)
+            .padding(.bottom)
+        }
+        .padding()
     }
 }
 

@@ -26,7 +26,7 @@ struct TextFieldComponent: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .frame(width: .infinity, height: 65)
+                .frame(height: 65)
                 .foregroundStyle(.gray.opacity(0.2))
             Text(placeholder)
                 .font(.customFont(type: .light, size: .small))

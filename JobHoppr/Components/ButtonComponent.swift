@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ButtonComponent: View {
     let title: String
+    @State var buttonStyle: JHButtonStyle
     let action: (() -> Void)?
     
     var body: some View {
@@ -17,13 +18,13 @@ struct ButtonComponent: View {
                 action()
             }
         }, label: {
-            RoundedRectangle(cornerRadius: 50)
-                .foregroundStyle(.primary500)
+            RoundedRectangle(cornerRadius: 18)
+                .foregroundStyle(buttonStyle == .filled ? .primary500 : .clear)
                 .overlay {
-                    Text("Update")
+                    Text(title)
                         .font(.customFont(type: .bold, size: .small))
                         .frame(maxWidth: .infinity)
-                        .foregroundStyle(.primary900)
+                        .foregroundStyle(buttonStyle == .filled ? .primary900 : .primary500)
                 }
                 .frame(height: 50)
         })
@@ -31,8 +32,18 @@ struct ButtonComponent: View {
     }
 }
 
+enum JHButtonStyle {
+    case filled
+    case plain
+}
+
 #Preview {
-    ButtonComponent(title: "Title") {
-        print("action")
+    VStack {
+        ButtonComponent(title: "Title", buttonStyle: .filled) {
+            print("action")
+        }
+        ButtonComponent(title: "Title", buttonStyle: .plain) {
+            print("action")
+        }
     }
 }

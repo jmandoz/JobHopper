@@ -45,7 +45,7 @@ struct LogInView: View {
             })
             .padding()
             .background(.primaryBackground)
-            .hasErrorView(withMessage: "Error", show: $authManager.showError)
+            .hasErrorView(withMessage: authManager.authError?.rawValue ?? "Error", show: $authManager.showError)
             
         }
         .navigationBarTitleDisplayMode(.large)

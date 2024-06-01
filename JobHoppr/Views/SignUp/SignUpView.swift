@@ -16,7 +16,7 @@ struct SignUpView: View {
     @State var password: String = ""
     
     var body: some View {
-            VStack(spacing: 45) {
+            VStack(spacing: 30) {
                 Text("Sign Up")
                     .font(.customFont(type: .semiBold, size: .xtraLarge))
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -32,7 +32,7 @@ struct SignUpView: View {
             }
             .padding()
             .background(.primaryBackground)
-            .hasErrorView(withMessage: "Error", show: $authManager.showError)
+            .hasErrorView(withMessage: authManager.authError?.rawValue ?? "Error", show: $authManager.showError)
     }
 }
 

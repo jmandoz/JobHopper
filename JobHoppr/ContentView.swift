@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authManager: AuthManager
+    @ObservedObject var authManager: AuthManager
     @State var isPresentingLogin = false
     @State var selectedTab = 2
     var body: some View {
         VStack {
-            if authManager.authState != .signedOut {
-                HomeView()
-            } else {
-                LogInView()
-            }
+//            if authManager.isLoading {
+//                loadingView()
+//            } else {
+                if authManager.authState != .signedOut {
+                    HomeView(authManager: authManager)
+                } else {
+                    LogInView(authManager: authManager)
+                }
+//            }
         }
     }
     
@@ -28,12 +32,8 @@ struct ContentView: View {
             Spacer()
         }
     }
-    
-    func onLogInDismiss() {
-        
-    }
 }
 
 #Preview {
-    ContentView()
+    ContentView(authManager: .init())
 }

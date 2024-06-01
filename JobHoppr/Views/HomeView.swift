@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeView: View {
     @Namespace var namespace
     @StateObject var viewModel = ListViewModel()
+    @ObservedObject var authManager: AuthManager
     
     @State var offsetY: CGFloat = 0
     @State var offsetX: CGFloat = 0
     @State var scale: CGFloat = 1
-    @State var showDetail: Bool = false
+    @State var showDetail = false
+    @State var showProfileView = false
     
     private let detailOpenDuration = 0.2
     
@@ -46,6 +48,21 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity)
             .background(.primaryBackground)
+            .fullScreenCover(isPresented: $showProfileView, content: {
+                VStack {
+                    Text("Sign out")
+                        .font(.customFont(type: .book, size: .xtraLarge))
+                    ButtonComponent(title: "Sign Out", buttonStyle: .filled) {
+                        authManager.signOut {
+                            showProfileView = false
+                        }
+                    }
+                    
+                    ButtonComponent(title: "Dismiss", buttonStyle: .plain) {
+                        showProfileView = false
+                    }
+                }
+            })
         }
     }
     
@@ -81,6 +98,9 @@ struct HomeView: View {
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 50, height: 50)
                         .shadow(radius: 2)
+                        .onTapGesture {
+                            showProfileView = true
+                        }
                     Spacer()
                     Image(systemName: "bell.fill")
                         .resizable()
@@ -167,5 +187,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(authManager: .init())
 }

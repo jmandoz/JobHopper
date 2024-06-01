@@ -9,8 +9,11 @@ import SwiftUI
 import FirebaseAuth
 
 struct LogInView: View {
+    @ObservedObject var authManager: AuthManager
     @State var email: String = ""
     @State var password: String = ""
+    @State var showSignUp = false
+    @State var showLoading = false
     
     var body: some View {
         NavigationStack {
@@ -18,36 +21,39 @@ struct LogInView: View {
                 Text("Log in")
                     .font(.customFont(type: .semiBold, size: .xtraLarge))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
+                    .padding(.vertical)
                 TextFieldComponent(placeholder: "Email",
                                    text: $email)
                 TextFieldComponent(placeholder: "Password",
                                    text: $password,
                                    isSecure: true)
                 Spacer()
-                ButtonComponent(title: "Submit", buttonStyle: .filled) {
-                    Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                        if var error {
-                           print(error)
-                        }
-                        if var authResult {
-                            print(authResult)
+                VStack {
+                    ButtonComponent(title: "Submit", buttonStyle: .filled) {
+                        showLoading = true
+                        authManager.signIn(with: email, password: password) {
+                            showLoading = false
                         }
                     }
-                }
-                NavigationLink(destination: SignUpView()) {
-                    Text("Sign up")
+                    ButtonComponent(title: "Sign Up", buttonStyle: .plain) {
+                        showSignUp = true
+                    }
                 }
             }
+            .navigationDestination(isPresented: $showSignUp, destination: {
+                SignUpView(authManager: authManager)
+            })
             .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.primaryBackground)
+            .hasErrorView(withMessage: "Error", show: $authManager.showError)
+            
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.large)
+        .navigationTitle("Hello")
         .tint(.primary200)
     }
 }
 
 #Preview {
-    LogInView()
+    LogInView(authManager: .init())
 }

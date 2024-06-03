@@ -17,9 +17,9 @@ enum AuthState {
 }
 
 protocol UserManaging {
-    func signOut(completion: (() -> Void)?) async
-    func signIn(with email: String, password: String, completion: (() -> Void)?) async
-    func createUser(email: String, password: String, displayName: String?, completion: (() -> Void)?) async
+    func signOut(completion: @escaping (() -> Void)) async
+    func signIn(with email: String, password: String, completion: @escaping (() -> Void)) async
+    func createUser(email: String, password: String, displayName: String?, completion: @escaping (() -> Void)) async
 }
 
 @MainActor 
@@ -27,9 +27,7 @@ class AuthManager: ObservableObject {
     @Published var user: User?
     @Published var authState: AuthState = .signedOut
     @Published var authError: AuthenticationError?
-    @Published var isLoading = true
     @Published var showError = false
-    @Published var errorText: String = ""
     
     private var authStateListener: AuthStateDidChangeListenerHandle?
     
@@ -41,7 +39,6 @@ class AuthManager: ObservableObject {
     }
     
     private func configureInitialAuthState() {
-        isLoading = true
         authStateListener = Auth.auth().addStateDidChangeListener({ auth, user in
             if let user = user {
                 print(user.displayName ?? "display name is nil")
@@ -49,7 +46,6 @@ class AuthManager: ObservableObject {
             } else {
                 self.updateState(user: nil)
             }
-            self.isLoading = false
         })
     }
     
@@ -65,51 +61,44 @@ class AuthManager: ObservableObject {
         }
     }
     
-    private func signOut(completion: (() -> Void)? = nil) async throws {
+    private func signOut(completion: (() -> Void)) async throws {
         if let _ = Auth.auth().currentUser {
-            isLoading = true
             do {
                 try Auth.auth().signOut()
-                if let completion {
-                    completion()
-                }
-            }
-            catch let error as NSError {
+                completion()
+            } catch let error as NSError {
                 print(error.localizedDescription)
+                completion()
                 throw error
             }
-            isLoading = false
         }
     }
     
     private func signIn(with email: String, 
                         password: String,
-                        completion: (() -> Void)? = nil) async throws {
+                        completion: (() -> Void)) async throws {
         do {
             try await Auth.auth().signIn(withEmail: email, password: password)
-            if let completion {
-                completion()
-            }
+            completion()
         } catch {
             print(error.localizedDescription)
             triggerError(with: .incorrectEmailOrPassword)
+            completion()
             throw error
         }
     }
     
-    private func createUser(with email: String, 
+    private func createUser(with email: String,
                             password: String,
                             displayName: String? = nil,
-                            completion: (() -> Void)? = nil) async throws {
+                            completion: (() -> Void)) async throws {
         do {
             try await Auth.auth().createUser(withEmail: email, password: password)
-            if let completion {
-                completion()
-            }
+            completion()
         } catch {
             print(error.localizedDescription)
-            triggerError(with: authError)
-            isLoading = false
+            triggerError(with: .cannotCreateUser)
+            completion()
             throw error
         }
     }
@@ -119,50 +108,33 @@ class AuthManager: ObservableObject {
     }
     
     private func triggerError(with message: AuthenticationError?) {
-        errorText = message?.rawValue ?? ""
+        authError = message
         showError = true
     }
 }
 
 extension AuthManager: UserManaging {
-    func signOut(completion: (() -> Void)? = nil) {
+    
+    func signOut(completion: @escaping (() -> Void)) {
         Task {
-            self.isLoading = true
-            try await signOut()
-            if let completion = completion {
-                completion()
-                isLoading = false
-            }
+            try await signOut(completion: completion)
         }
     }
     
     func signIn(with email: String,
                 password: String,
-                completion: (() -> Void)? = nil) {
+                completion: @escaping (() -> Void)) {
         Task {
-            isLoading = true
-            try await signIn(with: email, password: password)
-            if let completion = completion {
-                completion()
-            }
-            isLoading = false
+            try await signIn(with: email, password: password, completion: completion)
         }
     }
     
     func createUser(email: String,
                     password: String,
                     displayName: String? = nil,
-                    completion: (() -> Void)? = nil) {
+                    completion: @escaping (() -> Void)) {
         Task {
-            isLoading = true
-            try await createUser(with: email, password: password)
-            if let displayName = displayName {
-                
-            }
-            if let completion = completion {
-                completion()
-            }
-            isLoading = false
+            try await createUser(with: email, password: password, completion: completion)
         }
     }
 }

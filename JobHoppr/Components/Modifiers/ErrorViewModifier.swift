@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 struct ErrorViewModifier: ViewModifier {
-    var text: String
+    let text: String
     @Binding var show: Bool
-    @State var timeRemaining = 0
+    @State var timeRemaining = 3
     @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     
@@ -39,11 +39,6 @@ struct ErrorViewModifier: ViewModifier {
             .offset(y: show ? 0 : 110)
             .animation(.bouncy, value: show)
             .opacity(show ? 1 : 0)
-            .onChange(of: show, { _, newValue in
-                if newValue {
-                    timeRemaining = 3
-                }
-            })
             .onReceive(timer, perform: { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1
@@ -51,6 +46,7 @@ struct ErrorViewModifier: ViewModifier {
                     withAnimation {
                         show = false
                     }
+                    timeRemaining = 3
                 }
             })
         }

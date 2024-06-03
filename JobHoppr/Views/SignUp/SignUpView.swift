@@ -14,25 +14,28 @@ struct SignUpView: View {
     @State var lastName: String = ""
     @State var email: String = ""
     @State var password: String = ""
+    @State var showLoading: Bool = false
     
     var body: some View {
             VStack(spacing: 30) {
-                Text("Sign Up")
-                    .font(.customFont(type: .semiBold, size: .xtraLarge))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.bottom)
                 TextFieldComponent(placeholder: "First Name", text: $firstName)
+                    .padding(.top, 40)
                 TextFieldComponent(placeholder: "Last Name", text: $lastName)
                 TextFieldComponent(placeholder: "Email", text: $email)
                 TextFieldComponent(placeholder: "Password", text: $password)
                 Spacer()
                 ButtonComponent(title: "Submit", buttonStyle: .filled) {
-                    authManager.createUser(email: email, password: password)
+                    showLoading = true
+                    authManager.createUser(email: email, password: password) {
+                        showLoading = false
+                    }
                 }
             }
             .padding()
             .background(.primaryBackground)
+            .navigationTitle("Sign Up")
             .hasErrorView(withMessage: authManager.authError?.rawValue ?? "Error", show: $authManager.showError)
+            .hasLoadingView(withMessage: "Loading...", show: $showLoading)
     }
 }
 

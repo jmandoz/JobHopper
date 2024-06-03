@@ -14,6 +14,8 @@
 		4C18BF212BFAB22800A4F294 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4C18BF202BFAB22800A4F294 /* FirebaseFirestore */; };
 		4C18BF262BFD834C00A4F294 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18BF252BFD834C00A4F294 /* AuthManager.swift */; };
 		4C19BA4C2C095DEC0014AEEF /* ErrorViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19BA4B2C095DEC0014AEEF /* ErrorViewModifier.swift */; };
+		4C19BA4F2C0D411D0014AEEF /* LoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19BA4E2C0D411D0014AEEF /* LoadingComponent.swift */; };
+		4C19BA512C0D49180014AEEF /* LoadingViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C19BA502C0D49180014AEEF /* LoadingViewModifier.swift */; };
 		4C1E37432B9E8D7F0038E7DC /* JobHopperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */; };
 		4C1E37452B9E8D7F0038E7DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E37442B9E8D7F0038E7DC /* ContentView.swift */; };
 		4C1E37472B9E8D800038E7DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1E37462B9E8D800038E7DC /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		4C18BF162BFAB10F00A4F294 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C18BF252BFD834C00A4F294 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		4C19BA4B2C095DEC0014AEEF /* ErrorViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModifier.swift; sourceTree = "<group>"; };
+		4C19BA4E2C0D411D0014AEEF /* LoadingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponent.swift; sourceTree = "<group>"; };
+		4C19BA502C0D49180014AEEF /* LoadingViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModifier.swift; sourceTree = "<group>"; };
 		4C1E373F2B9E8D7F0038E7DC /* JobHoppr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobHoppr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1E37422B9E8D7F0038E7DC /* JobHopperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHopperApp.swift; sourceTree = "<group>"; };
 		4C1E37442B9E8D7F0038E7DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -181,8 +185,21 @@
 			isa = PBXGroup;
 			children = (
 				4C19BA4B2C095DEC0014AEEF /* ErrorViewModifier.swift */,
+				4C19BA502C0D49180014AEEF /* LoadingViewModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		4C19BA4D2C0D40E90014AEEF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */,
+				4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */,
+				4CBD80502BD441040072EA1A /* TextFieldComponent.swift */,
+				4CBD80522BD452EC0072EA1A /* ButtonComponent.swift */,
+				4C19BA4E2C0D411D0014AEEF /* LoadingComponent.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		4C1E37362B9E8D7F0038E7DC = {
@@ -315,10 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				4C19BA4A2C095D380014AEEF /* Modifiers */,
-				4CE226EF2BAF8D5A004172DF /* JobCardComponent.swift */,
-				4CBD804C2BD2B7A20072EA1A /* ActivityComponent.swift */,
-				4CBD80502BD441040072EA1A /* TextFieldComponent.swift */,
-				4CBD80522BD452EC0072EA1A /* ButtonComponent.swift */,
+				4C19BA4D2C0D40E90014AEEF /* Core */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -479,6 +493,7 @@
 			files = (
 				4CE226ED2BAF8B61004172DF /* JobOpening.swift in Sources */,
 				4C18BF262BFD834C00A4F294 /* AuthManager.swift in Sources */,
+				4C19BA4F2C0D411D0014AEEF /* LoadingComponent.swift in Sources */,
 				4C1E37452B9E8D7F0038E7DC /* ContentView.swift in Sources */,
 				4C964B492BAFB4520036437A /* Font+Extensions.swift in Sources */,
 				4CBD804D2BD2B7A20072EA1A /* ActivityComponent.swift in Sources */,
@@ -494,6 +509,7 @@
 				4CBD80552BD458730072EA1A /* SignUpView.swift in Sources */,
 				4CE226F02BAF8D5A004172DF /* JobCardComponent.swift in Sources */,
 				4CBD80512BD441040072EA1A /* TextFieldComponent.swift in Sources */,
+				4C19BA512C0D49180014AEEF /* LoadingViewModifier.swift in Sources */,
 				4CE226F62BAFA167004172DF /* Interview.swift in Sources */,
 				4CBD80532BD452EC0072EA1A /* ButtonComponent.swift in Sources */,
 			);

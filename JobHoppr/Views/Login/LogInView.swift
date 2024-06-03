@@ -18,12 +18,9 @@ struct LogInView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 45) {
-                Text("Log in")
-                    .font(.customFont(type: .semiBold, size: .xtraLarge))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.vertical)
                 TextFieldComponent(placeholder: "Email",
                                    text: $email)
+                .padding(.top, 40)
                 TextFieldComponent(placeholder: "Password",
                                    text: $password,
                                    isSecure: true)
@@ -43,13 +40,13 @@ struct LogInView: View {
             .navigationDestination(isPresented: $showSignUp, destination: {
                 SignUpView(authManager: authManager)
             })
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("Log in")
             .padding()
             .background(.primaryBackground)
             .hasErrorView(withMessage: authManager.authError?.rawValue ?? "Error", show: $authManager.showError)
-            
+            .hasLoadingView(withMessage: "Loading...", show: $showLoading)
         }
-        .navigationBarTitleDisplayMode(.large)
-        .navigationTitle("Hello")
         .tint(.primary200)
     }
 }
